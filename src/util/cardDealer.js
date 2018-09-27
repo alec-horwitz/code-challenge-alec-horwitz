@@ -29,6 +29,7 @@ const dealAll = (players, deck) => {
     }
 
 
+
     // TODO: this is where the work goes
 
     assert(remader != deckCardsLength, 'Wrong number of cards delt');
@@ -71,6 +72,7 @@ const dealSome = (players, deck, numberOfCardsPerPlayer) => {
         deck.cards = [...deck.cards.slice(0,index), ...deck.cards.slice(index+1)];
         deckCardsLength = deck.cards.length
       }
+    }
 
 
 
