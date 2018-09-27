@@ -10,7 +10,7 @@ describe('cardDealer.js', () => {
      * that is produced by CardDealer.shuffleDeck().
      */
     describe('Compare an unshuffled deck with a shuffled deck', () => {
-        it.skip('a shuffled deck should not match an unshuffled deck', () => {
+        it('a shuffled deck should not match an unshuffled deck', () => {
             const unshuffledDeck = new Deck();
             const deckToShuffle = new Deck();
 
@@ -31,7 +31,7 @@ describe('cardDealer.js', () => {
      * CardDealer.shuffleCards()
      */
     describe('Compare unshuffled cards with shuffled cards', () => {
-        it.skip('shuffled cards should not match unshuffled cards', () => {
+        it('shuffled cards should not match unshuffled cards', () => {
             const unshuffledCards = new Deck().getCards();
             const cardsToShuffle = new Deck().getCards();
 
