@@ -128,23 +128,23 @@ const shuffleDeck = (deck) => {
 const shuffleCards = (cards) => {
     assert(cards != null, 'cards cannot be null');
 
-    let newCards = []
-    let cardsLength = cards.length
-    const maxCards = cardsLength
+    let cardsToShuffle = [...cards]
+
+    let shuffledCards = []
+    let cardsToShuffleLength = cardsToShuffle.length
+    const maxCards = cardsToShuffleLength
 
     for (var i = 0; i < maxCards; i++) {
-      let card = cards[Math.floor(Math.random()*cardsLength)];
-      newCards = [...newCards, card]
-      let index = cards.indexOf(card)
-      cards = [...cards.slice(0,index), ...cards.slice(index+1)];
-      cardsLength = cards.length
+      let card = cardsToShuffle[Math.floor(Math.random()*cardsToShuffleLength)];
+      shuffledCards = [...shuffledCards, card]
+      let index = cardsToShuffle.indexOf(card)
+      cardsToShuffle = [...cardsToShuffle.slice(0,index), ...cardsToShuffle.slice(index+1)];
+      cardsToShuffleLength = cardsToShuffle.length
     }
-
-    cards = newCards
 
     // TODO: this is where the work goes
     // TODO: this is NOT the correct solution, it is simply returning the input deck without being shuffled
-    return cards;
+    return shuffledCards;
 };
 
 module.exports = { dealAll, dealSome, shuffleDeck, shuffleCards };
