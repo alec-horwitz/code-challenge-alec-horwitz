@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "jest": {
+    "testEnvironment": "node",
     "unmockedModulePathPatterns": [],
     "roots": [
       "<rootDir>/src"
